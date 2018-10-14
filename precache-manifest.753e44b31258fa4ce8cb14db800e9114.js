@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/simple-portfolio/static/media/weather-app.42d2c6ff.png"
   },
   {
-    "revision": "ff9975762d92be2e3ded",
-    "url": "/simple-portfolio/static/css/main.1f4576f5.chunk.css"
+    "revision": "465a79ca1a148eae2b2e",
+    "url": "/simple-portfolio/static/css/main.2a62bf6a.chunk.css"
   },
   {
     "revision": "a91b581da1321170f5cc29d17b82644f",
     "url": "/simple-portfolio/static/media/DroidSansMono-webfont.a91b581d.woff"
   },
   {
-    "revision": "c9897294e6393eb81e27",
-    "url": "/simple-portfolio/static/js/1.c9897294.chunk.js"
+    "revision": "9eb554547b4cbca770e6",
+    "url": "/simple-portfolio/static/js/1.9eb55454.chunk.js"
   },
   {
     "revision": "fb782bb126f432bb3fd4",
@@ -36,20 +36,20 @@ self.__precacheManifest = [
     "url": "/simple-portfolio/static/media/random-quote-machine.a66cf96c.png"
   },
   {
-    "revision": "ff9975762d92be2e3ded",
-    "url": "/simple-portfolio/static/js/main.ff997576.chunk.js"
+    "revision": "465a79ca1a148eae2b2e",
+    "url": "/simple-portfolio/static/js/main.465a79ca.chunk.js"
   },
   {
     "revision": "f4769f9bdb7466be65088239c12046d1",
     "url": "/simple-portfolio/static/media/glyphicons-halflings-regular.f4769f9b.eot"
   },
   {
-    "revision": "448c34a56d699c29117adc64c43affeb",
-    "url": "/simple-portfolio/static/media/glyphicons-halflings-regular.448c34a5.woff2"
-  },
-  {
     "revision": "fa2772327f55d8198301fdb8bcfc8158",
     "url": "/simple-portfolio/static/media/glyphicons-halflings-regular.fa277232.woff"
+  },
+  {
+    "revision": "448c34a56d699c29117adc64c43affeb",
+    "url": "/simple-portfolio/static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
     "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
@@ -64,11 +64,11 @@ self.__precacheManifest = [
     "url": "/simple-portfolio/static/media/weathericons-regular-webfont.8cac70eb.woff"
   },
   {
-    "revision": "c9897294e6393eb81e27",
+    "revision": "9eb554547b4cbca770e6",
     "url": "/simple-portfolio/static/css/1.9f569468.chunk.css"
   },
   {
-    "revision": "27670465d7ec3d7400d5284da1ee8b53",
+    "revision": "3b52f0e5290e0fcc7a629437323722f1",
     "url": "/simple-portfolio/index.html"
   }
 ];
