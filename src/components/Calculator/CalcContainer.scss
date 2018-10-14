@@ -1,0 +1,78 @@
+$buttonWidth: 75px;
+$formulaHeight: 20px;
+$hoverColor: #FF0;
+
+.calc-wrapper {
+  // min-height: 440px;
+  background-color: #306630;
+}
+
+#calculator {
+  width: $buttonWidth * 4 + 2 * 2px;
+  margin: auto;
+  flex-shrink: 0;
+  padding: 2px;
+  position: relative;
+  background: #000;
+}
+
+#display {
+  line-height: 1.5;
+  font-size: 1.6em;
+  text-align: right;
+  color: #FFF;
+}
+
+#formula {
+  height: $formulaHeight;
+  min-height: $formulaHeight;
+  overflow-wrap: break-word;
+  text-align: right;
+  color: #FF0;
+}
+
+.calcButton {
+  width: $buttonWidth;
+  height: $buttonWidth;
+  position: relative;
+  border: none;
+  outline: 1px solid #000;
+  font-size: 1.2em;
+  text-align: center;
+  color: #FFF;
+  background: #555;
+
+  .hasHover &:hover {
+    color: $hoverColor;
+    outline: 1.5px solid $hoverColor;
+    z-index: 1;
+  }
+}
+
+.zero {
+  width: 2 * $buttonWidth;
+}
+
+.clear {
+  width: 2 * $buttonWidth;
+  background: #900;
+}
+
+.signs {
+  font-size: 1.7em;
+  vertical-align: bottom;
+}
+
+.equals {
+  @extend .signs;
+  height: 2 * $buttonWidth;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: #009;
+}
+
+.operator {
+  @extend .signs;
+  background: #999;
+}

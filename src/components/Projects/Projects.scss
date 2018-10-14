@@ -1,0 +1,17 @@
+.projects {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; // background: rgb(168, 206, 184);
+  background: transparent;
+
+  &__header {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  >div {
+    width: 100%; // padding: 20px;
+    margin: auto; // background: #fff;
+  }
+}

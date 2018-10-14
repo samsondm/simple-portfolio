@@ -1,0 +1,3 @@
+export const REQUEST_QUOTE = 'REQUEST_QUOTE';
+export const RECIEVE_QUOTE = 'RECIEVE_QUOTE';
+export const GET_CACHED_QUOTE = 'GET_CACHED_QUOTE';

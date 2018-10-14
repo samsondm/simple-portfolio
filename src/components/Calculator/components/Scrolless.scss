@@ -1,0 +1,71 @@
+.scrolless {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &__track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__inner {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden; // line-height: $formulaHeight;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  &__btn {
+    line-height: 0;
+  }
+
+  &__arrow {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    visibility: visible;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: 0 0;
+      transform: rotate(45deg) translate(-37.5%, -62.5%);
+      border-left: 1px solid red;
+      border-bottom: 1px solid red;
+    }
+
+    &_left {
+      // position: relative;
+      // left: -2px;
+      // width: 10px;
+      // height: 10px;
+      // border-left: 3px solid red;
+      // border-bottom: 3px solid red;
+      transform: rotate(0deg);
+    }
+
+    &_right {
+      // position: relative;
+      // right: -2px;
+      // width: 10px;
+      // height: 10px;
+      // border-left: 3px solid red;
+      // border-bottom: 3px solid red;
+      transform: rotate(180deg);
+    }
+
+    &_hidden {
+      visibility: hidden;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import './sass-utility/variables';
+@import './sass-utility/RangeInput';
+$playBtnWidth: 8rem;
+$playButtonShaddowWidth: 0.3rem;
+$controlPadWidth: 20rem;
+
+body.hasHover .drum-pad:hover {
+  background-color: darken($color: $AppBackground, $amount: 30);
+}
+
+.drum-machine-wrapper {
+  padding: 1%;
+  background-color: $inactiveBackground;
+}
+
+.drum-machine {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  max-width: 3 * $playBtnWidth+2 * $playBtnWidth / 2.5+$controlPadWidth;
+  margin: auto;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: $AppBackground;
+  box-shadow: 0 0 0.5rem #000;
+  border-radius: 0.5rem;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  .drum-pad-container {
+    width: 3 * $playBtnWidth + 2 * $playBtnWidth / 2.5;
+    height: 3 * $playBtnWidth + 2 * $playBtnWidth / 2.5;
+    padding: $playBtnWidth / 5;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+
+    .drum-pad {
+      font-size: 2rem;
+      font-weight: bold;
+      width: $playBtnWidth;
+      height: $playBtnWidth;
+      border-radius: 1rem;
+      box-shadow: $playButtonShaddowWidth $playButtonShaddowWidth 0.5rem #333333;
+      background-color: $inactiveBackground;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &.active {
+        //height: $playBtnWidth * 0.95;
+        box-shadow: 0 0 0.5rem #333333;
+        background-color: $activeBackground;
+        transform: translate($playButtonShaddowWidth, $playButtonShaddowWidth);
+      }
+    }
+  }
+
+  .drum-pad-control {
+    width: $controlPadWidth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .volume {
+      width: 15rem;
+    }
+
+    .drum-pad-display {
+      width: 12rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      line-height: 2.5;
+      background-color: $activeBackground;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .drum-machine {
+    width: 3 * $playBtnWidth + 2 * $playBtnWidth / 2.5;
+  }
+}

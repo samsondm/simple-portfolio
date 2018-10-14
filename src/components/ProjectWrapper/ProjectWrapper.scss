@@ -1,0 +1,52 @@
+$backSize: 4rem;
+$backPosition: 0;
+$project-width: 100%;
+$project-max-width: 1600px;
+$project-min-width: 320px;
+
+.project-wrapper {
+  position: relative;
+  width: $project-width;
+  max-width: $project-max-width;
+  min-width: $project-min-width;
+  min-height: calc(100vh - 20px); // for ie not hidding overflow content
+  margin: auto; // flex-shrink: 0; // 
+  padding: 10px 10px;
+  flex-basis: $project-width; // ie width fix
+  display: flex;
+  align-items: center; // for ie vertical centering
+  overflow: auto;
+  z-index: 100;
+  user-select: none; // transform: translateZ(0); // make this element containing block for 'position: fixed' descendants
+
+  &__back-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: $project-width;
+    max-width: $project-max-width;
+    min-width: $project-min-width;
+    height: $backSize;
+    margin: 0 auto;
+  }
+
+  &__back {
+    position: absolute;
+    right: $backPosition;
+    top: $backPosition;
+    line-height: 0;
+    cursor: pointer;
+
+    &::after {
+      content: "\00d7";
+      display: inline-block;
+      width: $backSize;
+      height: $backSize;
+      font-size: $backSize;
+      text-align: center;
+      line-height: 1;
+      color: #000;
+    }
+  }
+}

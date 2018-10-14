@@ -1,0 +1,49 @@
+$fadetime: 2s;
+
+.random-quote-machine-wrapper {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #333;
+  transition: background-color $fadetime * 2 linear;
+}
+
+#quote-box {
+  width: 100%;
+  max-width: 50rem;
+  margin: auto;
+  padding-bottom: 1.5rem;
+  background-color: #FFF;
+
+  .transition-height-container {
+    overflow: hidden;
+    transition: height $fadetime / 2 linear;
+
+    >div {
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.fadein {
+  opacity: 0;
+  transition: opacity $fadetime linear;
+}
+
+.fadeout {
+  opacity: 1;
+  transition: opacity $fadetime * 3 / 4 ease-in $fadetime / 4;
+}
+
+#tweet-quote {
+  color: #FFF;
+  transition: background-color $fadetime * 2 linear;
+}
+
+#new-quote {
+  color: #FFF;
+  transition: background-color $fadetime * 2 linear;
+}
+
+#author {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

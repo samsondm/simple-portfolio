@@ -1,0 +1,110 @@
+$mainBackground: #C14242;
+$border: #3535AA;
+$desctop-size: 10px;
+$mobile-size: 7px;
+$mobile: '(max-width: 400px)';
+
+.pomodoro-clock-wrapper {
+  background: $mainBackground;
+  user-select: none;
+}
+
+@mixin styling($mainSize) {
+  .pomodoro-clock {
+    width: 50 * $mainSize;
+    min-width: 25 * $mainSize;
+    font-size: 3 * $mainSize;
+  }
+}
+
+@include styling($desctop-size);
+
+.pomodoro-clock {
+  margin: auto;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  background: transparent;
+
+  &__label {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+  }
+
+  &__setting {
+    display: inline-block;
+
+    span {
+      display: inline-block;
+      width: 1.4em;
+    }
+  }
+
+  &__timer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 13em;
+    height: 13em;
+    margin: 0.5em auto;
+
+    &__digital {
+      margin: 0 auto;
+    }
+
+    &__circle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .timer {
+      &__label {
+        font-size: 1.5em;
+      }
+
+      &__time-left {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 3em;
+      }
+    }
+  }
+
+  &__control {
+    // line-height: 0;
+    flex-grow: 0;
+  }
+
+  &__button {
+    display: inline-block;
+    position: relative;
+    height: 1em;
+    font-size: 1em;
+    line-height: 1;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+
+    &_reset {
+      margin: 0 0.5em;
+      font-size: 1.5em;
+      vertical-align: 30%;
+    }
+
+    &_start-pause {
+      font-size: 2em;
+    }
+  }
+}
+
+@media #{$mobile} {
+  @include styling($mobile-size);
+}

@@ -1,0 +1,122 @@
+$dotColor: #fff; //rgb(168, 206, 184);
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.45);
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 99;
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+
+    &.slide-prev {
+      left: 3%;
+    }
+
+    &.slide-next {
+      right: 3%;
+    }
+
+    .icon-arrow {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: $dotColor;
+      border-radius: 50%;
+      opacity: 0.7;
+      transition: opacity .3s ease-in-out;
+      cursor: pointer;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      filter: blur(0);
+
+      &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0 0;
+        transform: rotate(45deg) translate(-37.5%, -62.5%);
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        backface-visibility: hidden;
+        filter: blur(0);
+      }
+
+      .hasHover &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .slider {
+    overflow: hidden;
+
+    .track {
+
+      // will-change: transform; // touch-action: pan-y;
+      &::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+
+      .slide {
+        float: left;
+      }
+    }
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    &__dot {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin: 0 3px;
+      background: $dotColor;
+      outline: none;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity .3s ease-in-out;
+
+      &_active,
+      .hasHover &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .carousel-wrapper {
+    .arrow {
+      display: none;
+    }
+
+    .dots {
+      &__dot {
+        width: 25px;
+        height: 25px;
+        margin: 0 5px;
+      }
+    }
+  }
+}
