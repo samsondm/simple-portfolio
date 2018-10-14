@@ -1,0 +1,22 @@
+{
+  "main.css": "/simple-portfolio/static/css/main.1f4576f5.chunk.css",
+  "main.js": "/simple-portfolio/static/js/main.ff997576.chunk.js",
+  "main.js.map": "/simple-portfolio/static/js/main.ff997576.chunk.js.map",
+  "static/css/1.b2e668d0.chunk.css": "/simple-portfolio/static/css/1.b2e668d0.chunk.css",
+  "static/js/1.e78214f7.chunk.js": "/simple-portfolio/static/js/1.e78214f7.chunk.js",
+  "static/js/1.e78214f7.chunk.js.map": "/simple-portfolio/static/js/1.e78214f7.chunk.js.map",
+  "runtime~main.js": "/simple-portfolio/static/js/runtime~main.fb782bb1.js",
+  "runtime~main.js.map": "/simple-portfolio/static/js/runtime~main.fb782bb1.js.map",
+  "static/media/calc.png": "/simple-portfolio/static/media/calc.b0c0716f.png",
+  "static/media/pomodoro-clock.png": "/simple-portfolio/static/media/pomodoro-clock.7e933802.png",
+  "static/media/random-quote-machine.png": "/simple-portfolio/static/media/random-quote-machine.a66cf96c.png",
+  "static/media/weather-app.png": "/simple-portfolio/static/media/weather-app.42d2c6ff.png",
+  "static/media/weather-icons.css": "/simple-portfolio/static/media/weathericons-regular-webfont.8cac70eb.woff",
+  "static/media/index.css": "/simple-portfolio/static/media/DroidSansMono-webfont.a91b581d.woff",
+  "static/media/drum-machine.png": "/simple-portfolio/static/media/drum-machine.b0706d73.png",
+  "static/css/main.1f4576f5.chunk.css.map": "/simple-portfolio/static/css/main.1f4576f5.chunk.css.map",
+  "static/css/1.b2e668d0.chunk.css.map": "/simple-portfolio/static/css/1.b2e668d0.chunk.css.map",
+  "index.html": "/simple-portfolio/index.html",
+  "precache-manifest.47d45ef5fd4d426b61713c8181bd0fa4.js": "/simple-portfolio/precache-manifest.47d45ef5fd4d426b61713c8181bd0fa4.js",
+  "service-worker.js": "/simple-portfolio/service-worker.js"
+}
