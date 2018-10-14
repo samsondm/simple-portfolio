@@ -15,7 +15,6 @@ $fadetime: 2s;
 
   .transition-height-container {
     overflow: hidden;
-    transition: height $fadetime / 2 linear;
 
     >div {
       padding-bottom: 5px;

@@ -6,12 +6,12 @@ import 'weathericons/css/weather-icons.css';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import App from './components/App/App';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter basename={process.env.PUBLIC_URL}>
     <App />
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root')
 );
 registerServiceWorker();

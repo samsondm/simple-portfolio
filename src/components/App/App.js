@@ -118,9 +118,8 @@ class App extends Component {
         description={this.componentsMap[value].description}
         stack={this.componentsMap[value].stack}
         key={value}
-      >
-        <Link to={"/" + value} tabIndex="-1" children="explore" />
-      </ProjectSlide>
+        link={value}
+      />
     );
 
     return (

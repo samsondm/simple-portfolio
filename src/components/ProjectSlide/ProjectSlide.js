@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ProjectSlide.css';
+import { withRouter } from 'react-router-dom';
 
-const ProjectSlide = ({ imgUrl, title = 'Test App', stack = 'React, SASS, REST API', description = 'Simple react project', isViewed, children }) => {
+const ProjectSlide = ({ imgUrl, title = 'Test App', stack = 'React, SASS, REST API', description = 'Simple react project', isViewed, link, history }) => {
   const style = {
     backgroundImage: `url(${imgUrl})`
   },
-    handleTransitionEnd = (e) => e.stopPropagation();
+    handleTransitionEnd = (e) => e.stopPropagation(),
+    handleClick = () => {
+      history.push('/' + link);
+    };
   return (
     <div className="project-slide aspect-ratio-wrapper">
       <div className="project-slide__background" style={style} />
@@ -20,7 +24,9 @@ const ProjectSlide = ({ imgUrl, title = 'Test App', stack = 'React, SASS, REST A
         <div className={"project-slide__stack semi-transparent-bg " + (isViewed ? "project-slide__stack_viewed" : "")}>
           {stack}
         </div>
-        {React.cloneElement(React.Children.only(children), { className: "project-slide__link semi-transparent-bg semi-transparent-bg_hover" })}
+        <div className="project-slide__link semi-transparent-bg semi-transparent-bg_hover" onClick={handleClick} onTouchStartCapture={handleClick} >
+          EXPLORE
+        </div>
       </div>
     </div>
   );
@@ -33,4 +39,4 @@ ProjectSlide.propTypes = {
   description: PropTypes.string,
 };
 
-export default ProjectSlide;
+export default withRouter(ProjectSlide);

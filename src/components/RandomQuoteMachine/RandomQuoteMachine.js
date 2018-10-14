@@ -19,10 +19,14 @@ class App extends Component {
       transitionState: 'fadein',
       bgColor: '#333',
       quoteContainerStyle: {
-        height: '26px'
+        height: '26px',
+        transition: ``,
+        WebkitTransition: ``,
       },
       authorContainerStyle: {
-        height: '26px'
+        height: '26px',
+        transition: ``,
+        WebkitTransition: ``,
       },
       tweetQuote: ''
     };
@@ -76,9 +80,13 @@ class App extends Component {
     if (this.state.transitionState === 'fadeout' && prevState.transitionState === 'fadein') {
       this.setState({
         quoteContainerStyle: {
+          transition: `height 1000ms linear`,
+          WebkitTransition: `height 1000ms linear`,
           height: this.quoteRef.current.offsetHeight,
         },
         authorContainerStyle: {
+          transition: `height 1000ms linear`,
+          WebkitTransition: `height 1000ms linear`,
           height: this.authorRef.current.offsetHeight
         },
         tweetQuote: this.quoteTextRef.current.textContent
@@ -97,9 +105,13 @@ class App extends Component {
       this.isTransitioning = false;
       this.setState({
         quoteContainerStyle: {
+          transition: ``,
+          WebkitTransition: ``,
           height: 'auto',
         },
         authorContainerStyle: {
+          transition: ``,
+          WebkitTransition: ``,
           height: 'auto'
         },
       });
