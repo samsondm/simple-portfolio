@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/simple-portfolio/static/media/weather-app.42d2c6ff.png"
   },
   {
-    "revision": "465a79ca1a148eae2b2e",
-    "url": "/simple-portfolio/static/css/main.2a62bf6a.chunk.css"
+    "revision": "7e69db12d4e1408130ae",
+    "url": "/simple-portfolio/static/css/main.e5e258fd.chunk.css"
   },
   {
     "revision": "a91b581da1321170f5cc29d17b82644f",
     "url": "/simple-portfolio/static/media/DroidSansMono-webfont.a91b581d.woff"
   },
   {
-    "revision": "9eb554547b4cbca770e6",
-    "url": "/simple-portfolio/static/js/1.9eb55454.chunk.js"
+    "revision": "7585debc85bdd6401a05",
+    "url": "/simple-portfolio/static/js/1.7585debc.chunk.js"
   },
   {
     "revision": "fb782bb126f432bb3fd4",
@@ -36,8 +36,12 @@ self.__precacheManifest = [
     "url": "/simple-portfolio/static/media/random-quote-machine.a66cf96c.png"
   },
   {
-    "revision": "465a79ca1a148eae2b2e",
-    "url": "/simple-portfolio/static/js/main.465a79ca.chunk.js"
+    "revision": "7e69db12d4e1408130ae",
+    "url": "/simple-portfolio/static/js/main.7e69db12.chunk.js"
+  },
+  {
+    "revision": "448c34a56d699c29117adc64c43affeb",
+    "url": "/simple-portfolio/static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
     "revision": "f4769f9bdb7466be65088239c12046d1",
@@ -46,10 +50,6 @@ self.__precacheManifest = [
   {
     "revision": "fa2772327f55d8198301fdb8bcfc8158",
     "url": "/simple-portfolio/static/media/glyphicons-halflings-regular.fa277232.woff"
-  },
-  {
-    "revision": "448c34a56d699c29117adc64c43affeb",
-    "url": "/simple-portfolio/static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
     "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
@@ -64,11 +64,11 @@ self.__precacheManifest = [
     "url": "/simple-portfolio/static/media/weathericons-regular-webfont.8cac70eb.woff"
   },
   {
-    "revision": "9eb554547b4cbca770e6",
+    "revision": "7585debc85bdd6401a05",
     "url": "/simple-portfolio/static/css/1.9f569468.chunk.css"
   },
   {
-    "revision": "3b52f0e5290e0fcc7a629437323722f1",
+    "revision": "6dceb40b271c3dc4b48da509d8b53968",
     "url": "/simple-portfolio/index.html"
   }
 ];
