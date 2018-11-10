@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './CalcContainer.css';
+import './CalcContainer.scss';
 import Calc from './components/Calc';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';

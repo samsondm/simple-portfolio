@@ -1,5 +1,5 @@
 import React from 'react';
-import './ToggleButton.css';
+import './ToggleButton.scss';
 
 const ToggleButton = ({ title, state, handleClick }) => {
   return (

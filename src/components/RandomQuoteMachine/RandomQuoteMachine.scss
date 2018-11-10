@@ -1,3 +1,6 @@
+@import './variables';
+@import '~bootstrap/scss/bootstrap';
+
 $fadetime: 2s;
 
 .random-quote-machine-wrapper {
@@ -10,7 +13,6 @@ $fadetime: 2s;
   width: 100%;
   max-width: 50rem;
   margin: auto;
-  padding-bottom: 1.5rem;
   background-color: #FFF;
 
   .transition-height-container {

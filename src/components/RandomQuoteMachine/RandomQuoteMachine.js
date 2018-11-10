@@ -4,7 +4,8 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faQuoteLeft from '@fortawesome/fontawesome-free-solid/faQuoteLeft';
 // import faQuoteRight from '@fortawesome/fontawesome-free-solid/faQuoteRight';
 import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
-import './RandomQuoteMachine.css';
+// import 'bootstrap/dist/css/bootstrap.scss';
+import './RandomQuoteMachine.scss';
 import store from './store/store';
 import { getCachedQuote, fetchQuote } from './actions/actions';
 import randomColor from './utility/randomColor';
@@ -78,16 +79,19 @@ class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.transitionState === 'fadeout' && prevState.transitionState === 'fadein') {
+      const quoteContainerHeight = this.getElementHeight(this.quoteRef.current);
+      const authorContainerHeight = this.getElementHeight(this.authorRef.current);
+
       this.setState({
         quoteContainerStyle: {
           transition: `height 1000ms linear`,
           WebkitTransition: `height 1000ms linear`,
-          height: this.quoteRef.current.offsetHeight,
+          height: quoteContainerHeight,
         },
         authorContainerStyle: {
           transition: `height 1000ms linear`,
           WebkitTransition: `height 1000ms linear`,
-          height: this.authorRef.current.offsetHeight
+          height: authorContainerHeight
         },
         tweetQuote: this.quoteTextRef.current.textContent
       });
@@ -118,17 +122,22 @@ class App extends Component {
     }
   }
 
+  getElementHeight = (elem) => elem.getBoundingClientRect().height;
+
   genQuote(e) {
     if (this.isTransitioning) return;
     this.isTransitioning = true;
     const bgColor = randomColor();
 
+    const quoteContainerHeight = this.getElementHeight(this.quoteRef.current);
+    const authorContainerHeight = this.getElementHeight(this.authorRef.current);
+
     this.setState({
       quoteContainerStyle: {
-        height: this.quoteRef.current.offsetHeight,
+        height: quoteContainerHeight,
       },
       authorContainerStyle: {
-        height: this.authorRef.current.offsetHeight
+        height: authorContainerHeight
       },
       transitionState: 'fadein',
       bgColor
@@ -146,17 +155,21 @@ class App extends Component {
       quote = this.props.quote;
 
     return (
-      <div id="quote-box" className="container-fluid panel text-center">
-        <div className="row h3 transition-height-container" style={this.state.quoteContainerStyle}>
-          <div id="text" ref={this.quoteRef} className={"col-xs-12 text-center " + transitionState} onTransitionEnd={this.handleTransitionEnd}>
-            <FontAwesomeIcon icon={faQuoteLeft} />
-            <Quote quote={quote} ref={this.quoteTextRef} />
-            {/* <FontAwesomeIcon icon={faQuoteRight} /> */}
+      <div id="quote-box" className="container-fluid py-4 card text-center">
+        <div className="row h3" >
+          <div id="text" className={"col-12 text-center transition-height-container"} style={this.state.quoteContainerStyle} onTransitionEnd={this.handleTransitionEnd}>
+            <div ref={this.quoteRef} className={transitionState}>
+              <FontAwesomeIcon icon={faQuoteLeft} />
+              <Quote quote={quote} ref={this.quoteTextRef} />
+              {/* <FontAwesomeIcon icon={faQuoteRight} /> */}
+            </div>
           </div>
         </div>
-        <div className="row h4 transition-height-container" style={this.state.authorContainerStyle}>
-          <div id="author" ref={this.authorRef} className={"col-sm-offset-8 col-sm-4 col-xs-offset-7 col-xs-5 text-center " + transitionState}>
-            <Author author={author} />
+        <div className="row h5" >
+          <div id="author" className={"offset-7 col-5 text-center transition-height-container"} style={this.state.authorContainerStyle}>
+            <div ref={this.authorRef} className={transitionState}>
+              <Author author={author} />
+            </div>
           </div>
         </div>
         <div className="clearfix">

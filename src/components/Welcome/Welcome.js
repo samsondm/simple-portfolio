@@ -3,7 +3,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub';
 import faCodepen from '@fortawesome/fontawesome-free-brands/faCodepen';
 import faAngleDoubleDown from '@fortawesome/fontawesome-free-solid/faAngleDoubleDown';
-import './Welcome.css';
+import './Welcome.scss';
 
 const Welcome = ({ onClick }) => (
   <section className="welcome min-height-flex-fix">

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './WeatherApp.css';
+import './WeatherApp.scss';
 // import Header from './components/Header';
 import Weather from './components/Weather';
 

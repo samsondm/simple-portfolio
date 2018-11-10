@@ -1,5 +1,5 @@
 import React from 'react';
-import './Projects.css';
+import './Projects.scss';
 
 const Projects = React.forwardRef(({ children }, ref) => (
   <section className="projects min-height-flex-fix" ref={ref}>

@@ -5,9 +5,7 @@
   transition: background-color .3s ease-in-out;
 
   &_hover {
-    &:hover {
-      background: rgba(0, 0, 0, 1);
-    }
+    background: rgba(0, 0, 0, 1);
   }
 }
 
@@ -86,6 +84,7 @@
     margin-top: auto;
     text-transform: uppercase;
     font-weight: 500;
+    touch-action: manipulation;
     cursor: pointer;
   }
 

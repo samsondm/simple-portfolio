@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import {
   Route,
   Switch,
-  // withRouter,
-  Link
 } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import Welcome from '../Welcome/Welcome';
 import Projects from '../Projects/Projects';
 import Carousel from '../Carousel/Carousel';

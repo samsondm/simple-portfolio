@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Scrolless.css';
+import './Scrolless.scss';
 
 class Scrolless extends Component {
   state = {

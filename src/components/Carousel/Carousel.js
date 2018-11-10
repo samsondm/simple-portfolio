@@ -3,7 +3,7 @@ import Track from './Track';
 import Slider from './Slider';
 import Dots from './Dots';
 import IconArrow from './IconArrow';
-import './Carousel.css';
+import './Carousel.scss';
 import ResizeObserver from 'resize-observer-polyfill';
 import createPointerEvent from '../../utility/createPointerEvent';
 import ElementInViewPortObserver from '../../utility/ElementInViewPortObserver';
@@ -22,6 +22,7 @@ class Carousel extends Component {
   sliding = false; // carousel sliding
   scrolling = false; // page scrolling
   animating = false; // rAF mouse move animation
+  transitionTime = 500;
   state = {
     beenViewed: false,
     transitioning: false, //
@@ -117,8 +118,8 @@ class Carousel extends Component {
         currentSlide: nextSlide,
         trackStyle: {
           // ...prevState.trackStyle,
-          transition: `transform 500ms ease`,
-          WebkitTransition: `-webkit-transform 500ms ease`,
+          transition: `transform ${this.transitionTime}ms ease`,
+          WebkitTransition: `-webkit-transform ${this.transitionTime}ms ease`,
           width: prevState.trackStyle.width,
           transform: transform,
           WebkitTransform: transform,
@@ -181,37 +182,41 @@ class Carousel extends Component {
     this.animating = false;
   }
 
-  handleTrackClick = (e) => {
-    if (this.state.transitioning || this.scrolling) {
-      e.preventDefault();
-      this.scrolling = false;
-    }
-  }
+  // handleTrackClick = (e) => {
+  //   if (this.state.transitioning || this.scrolling) {
+  //     e.preventDefault();
+  //     this.scrolling = false;
+  //   }
+  // }
 
   handleGestureStart = (e) => {
-    e.preventDefault();
+    // prevent gesture start and event propagation to descendants during transition
+    if (this.state.transitioning) {
+      e.stopPropagation();
+      return;
+    }
 
     if (e.touches && e.touches.length > 1) {
       return;
     }
 
-    // Add the move and end listeners
-    if (window.PointerEvent) {
+    if (this.isPointerSupported) {
+      // prevent sending mouse event
+      e.preventDefault();
+      // capture pointer event on currentTarget
       e.currentTarget.setPointerCapture(e.pointerId);
     } else {
-      // Add Mouse Listeners
+      // Add mouse move and up listeners to document so we can track events 
+      // outside of initial target hit box
       document.addEventListener('mousemove', this.handleGestureMove, true);
       document.addEventListener('mouseup', this.handleGestureEnd, true);
     }
 
-    if (!this.state.transitioning) {
-      this.pointerDown = true;
-      this.pointerDownCoord = this.getPointerCoord(e);
-    }
+    this.pointerDown = true;
+    this.pointerDownCoord = this.getPointerCoord(e);
   }
 
   handleGestureMove = (e) => {
-    e.preventDefault();
 
     if (!this.pointerDownCoord) return;
 
@@ -224,6 +229,8 @@ class Carousel extends Component {
         Math.abs(deltaX / this.state.slideWidth) < 0.1) { // possible bug(simultanious slide & doc scolling) on different values
         this.scrolling = true;
       } else if (this.sliding || Math.abs(deltaX / this.state.slideWidth) > 0.01) {
+        // prevent default action if we are not scrolling
+        e.preventDefault();
         this.sliding = true;
         // stop touch move when cursor's relative horizontal traveled distance is greater than 90% of slide width
         if ((e.touches || e.pointerType) && Math.abs(deltaX) > this.state.slideWidth * 0.90) {
@@ -235,8 +242,8 @@ class Carousel extends Component {
             pointerType: e.pointerType,
             clientX: e.clientX,
             clientY: e.clientY
-          },
-            pointerEvent = createPointerEvent('pointercancel', params);
+          };
+          const pointerEvent = createPointerEvent('pointercancel', params);
           // e.currentTarget.dispatchEvent(new Event('touchend', { bubbles: true }));
           e.currentTarget.dispatchEvent(pointerEvent);
           return;
@@ -252,19 +259,25 @@ class Carousel extends Component {
 
 
   handleGestureEnd = (e) => {
-    e.preventDefault();
+    // prevent gesture end and event propagation to descendants during transition and after force pointer cancel
+    if (!this.pointerDown) {
+      e.stopPropagation();
+      return;
+    }
+    // allow browser default action on pointercancel during scrolling
+    if (!this.scrolling) {
+      e.preventDefault();
+    }
     if (e.touches && e.touches.length > 0) {
       return;
     }
 
-    if (this.pointerDown) {
-      this.pointerDown = false;
-      this.animating = false;
-      this.sliding = false;
-      // defer scrolling disable for mouse click event
-      if (e.touches || e.pointerType !== 'mouse') {
-        this.scrolling = false;
-      }
+    this.pointerDown = false;
+    this.animating = false;
+    this.sliding = false;
+    if (this.scrolling) {
+      this.scrolling = false;
+    } else {
       const currTrackCoord = this.state.trackStyle.transform.match(/-?\d+(?:\.\d+)?/)[0], // match track coord
         deltaPercent = (currTrackCoord - (-(1 + this.state.currentSlide) * this.state.slideWidth)) / this.state.slideWidth;
       if (deltaPercent !== 0)
@@ -275,11 +288,9 @@ class Carousel extends Component {
             this.changeSlide(1));  // show right slide on moving left
     }
 
-    // Remove Event Listeners
-    if (window.PointerEvent) {
+    if (this.isPointerSupported) {
       e.currentTarget.releasePointerCapture(e.pointerId);
     } else {
-      // Remove Mouse Listeners
       document.removeEventListener('mousemove', this.handleGestureMove, true);
       document.removeEventListener('mouseup', this.handleGestureEnd, true);
     }
@@ -287,18 +298,15 @@ class Carousel extends Component {
     this.pointerDownCoord = null;
   }
 
-  // determine which props should be passed to Track
+  // determine which type of eventlisteners to add to Track
   handleGesture = this.isPointerSupported ?
     {
       onPointerDownCapture: this.handleGestureStart,
       onPointerMoveCapture: this.handleGestureMove,
       onPointerUpCapture: this.handleGestureEnd,
-      onPointerCancelCapture: this.handleGestureEnd
+      onPointerCancelCapture: this.handleGestureEnd,
     } : {
       onMouseDownCapture: this.handleGestureStart,
-      // onMouseMoveCapture: this.handleGestureMove,
-      // onMouseUpCapture: this.handleGestureEnd,
-      // onMouseLeaveCapture: this.handleGestureEnd,
       onTouchStartCapture: this.handleGestureStart,
       onTouchMoveCapture: this.handleGestureMove,
       onTouchEndCapture: this.handleGestureEnd,
@@ -318,7 +326,7 @@ class Carousel extends Component {
             style={this.state.trackStyle}
             slideWidth={this.state.slideWidth}
             onTransitionEnd={this.handleTransitionEnd}
-            onClick={this.handleTrackClick}
+            // onClick={this.handleTrackClick}
             handleGesture={this.handleGesture}
             children={this.props.children}
           />

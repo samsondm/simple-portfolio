@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './DrumMachine.css';
+import './DrumMachine.scss';
 import ControlPad from './components/ControlPad';
 import TuneDramPad from './containers/TuneDramPad';
 import rootReducer from './reducers';

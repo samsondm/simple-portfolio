@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ProjectWrapper.css';
+import './ProjectWrapper.scss';
 
 class ProjectWrapper extends Component {
   state = {

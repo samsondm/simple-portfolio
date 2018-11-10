@@ -1,9 +1,8 @@
 const scrollIntoView = (element, params = { behavior: "smooth", block: "start", inline: "nearest" }) => {
-  // test for native scrollIntoView options support
-  let optionsSupport = false;
   // test for smothscroll behavior support
-  optionsSupport = 'scrollBehavior' in document.documentElement.style;
+  // const optionsSupport = 'scrollBehavior' in document.documentElement.style;
   const scrollingElement = document.scrollingElement || document.documentElement; // top level scrolling element
+  // test for native scrollIntoView options support
   //   [scrollY, scrollX] = [scrollingElement.scrollTop, scrollingElement.scrollLeft], // top level scroll position
   //   testElement = document.createElement('div'),
   //   style = {
@@ -35,10 +34,11 @@ const scrollIntoView = (element, params = { behavior: "smooth", block: "start", 
   // }
 
   // use native when options are supported
-  if (optionsSupport) {
-    element.scrollIntoView(params);
-    return;
-  }
+  // disable native support because of firefox bug?
+  // if (optionsSupport) {
+  //   element.scrollIntoView(params);
+  //   return;
+  // }
   let scrollableParents = []; // array of all scrollable parents of element
   let parent = element,
     child = element,

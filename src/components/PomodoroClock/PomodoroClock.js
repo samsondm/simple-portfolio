@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './PomodoroClock.css';
+import './PomodoroClock.scss';
 import TimerSetting from './components/TimerSetting';
 import parseTimer, { minToSec } from './utility/parseTimer';
 import Timer from './components/Timer';

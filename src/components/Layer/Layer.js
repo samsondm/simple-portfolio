@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Layer.css';
+import './Layer.scss';
 
 class Layer extends Component {
   // get document scrolling element
@@ -9,15 +9,16 @@ class Layer extends Component {
 
   componentDidMount() {
     // setTimeout hack to prevent 'lagging' for slow mobiles
-    window.setTimeout(() => {
-      // save scroll position
-      this.scrollPosition = this.scrollingElement.scrollTop;
-      // prevent document scrolling when showing Layer
-      this.scrollingElement.style.overflow = 'hidden';
-      this.scrollingElement.style.width = '100%';
-      this.scrollingElement.style.position = 'fixed';
-      this.scrollingElement.style.top = -this.scrollPosition + 'px';
-    }, 100);
+    // ^^ this hack triggers repaint flickering on ios mobile in remote tests
+    // window.setTimeout(() => {
+    // save scroll position
+    this.scrollPosition = this.scrollingElement.scrollTop;
+    // prevent document scrolling when showing Layer
+    this.scrollingElement.style.overflow = 'hidden';
+    this.scrollingElement.style.width = '100%';
+    this.scrollingElement.style.position = 'fixed';
+    this.scrollingElement.style.top = -this.scrollPosition + 'px';
+    // }, 30);
   }
 
   componentWillUnmount() {

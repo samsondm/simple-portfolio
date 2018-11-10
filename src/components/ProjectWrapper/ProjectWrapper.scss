@@ -17,6 +17,7 @@ $project-min-width: 320px;
   align-items: center; // for ie vertical centering
   overflow: auto;
   z-index: 100;
+  touch-action: manipulation; // disable double-tap zoom
   user-select: none; // transform: translateZ(0); // make this element containing block for 'position: fixed' descendants
 
   &__back-container {
