@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './components/App/App';
 
 jest.mock('react-dom');
@@ -12,6 +12,11 @@ describe('index', () => {
     root.id = 'root';
     document.body.appendChild(root);
     require('index.js');
-    expect(render).toHaveBeenCalledWith(<BrowserRouter basename={process.env.PUBLIC_URL}><App /></BrowserRouter>, root);
+    expect(render).toHaveBeenCalledWith(
+      <HashRouter>
+        <App />
+      </HashRouter>,
+      root,
+    );
   });
 });

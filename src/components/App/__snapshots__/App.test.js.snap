@@ -23,76 +23,41 @@ ShallowWrapper {
         />,
         <ForwardRef>
           <Carousel>
-            <ProjectSlide
+            <withRouter(ProjectSlide)
               description="Get random quotes about design."
               imgUrl="random-quote-machine.png"
+              link="random-quote-machine"
               stack="React, Redux, Redux-Thunk, REST API"
               title="Random Quote Machine"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/random-quote-machine"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
-            <ProjectSlide
+            />
+            <withRouter(ProjectSlide)
               description="Drop some beats."
               imgUrl="drum-machine.png"
+              link="drum-machine"
               stack="React, Redux, SASS"
               title="Drum Machine"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/drum-machine"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
-            <ProjectSlide
+            />
+            <withRouter(ProjectSlide)
               description="Simple javascript calculator."
               imgUrl="calc.png"
+              link="calc"
               stack="React, Redux, Redux-Thunk"
               title="Calculator"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/calc"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
-            <ProjectSlide
+            />
+            <withRouter(ProjectSlide)
               description="Use the Pomodoro Technique to help you increase your focus."
               imgUrl="pomodoro-clock.png"
+              link="pomodoro-clock"
               stack="React, SASS"
               title="Pomodoro Clock"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/pomodoro-clock"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
-            <ProjectSlide
+            />
+            <withRouter(ProjectSlide)
               description="Check weather in your current location or in other cities."
               imgUrl="weather-app.png"
+              link="weather-app"
               stack="React, SASS, REST API"
               title="Weather App"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/weather-app"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
+            />
           </Carousel>
         </ForwardRef>,
         <Switch>
@@ -127,76 +92,41 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <Carousel>
-            <ProjectSlide
+            <withRouter(ProjectSlide)
               description="Get random quotes about design."
               imgUrl="random-quote-machine.png"
+              link="random-quote-machine"
               stack="React, Redux, Redux-Thunk, REST API"
               title="Random Quote Machine"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/random-quote-machine"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
-            <ProjectSlide
+            />
+            <withRouter(ProjectSlide)
               description="Drop some beats."
               imgUrl="drum-machine.png"
+              link="drum-machine"
               stack="React, Redux, SASS"
               title="Drum Machine"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/drum-machine"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
-            <ProjectSlide
+            />
+            <withRouter(ProjectSlide)
               description="Simple javascript calculator."
               imgUrl="calc.png"
+              link="calc"
               stack="React, Redux, Redux-Thunk"
               title="Calculator"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/calc"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
-            <ProjectSlide
+            />
+            <withRouter(ProjectSlide)
               description="Use the Pomodoro Technique to help you increase your focus."
               imgUrl="pomodoro-clock.png"
+              link="pomodoro-clock"
               stack="React, SASS"
               title="Pomodoro Clock"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/pomodoro-clock"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
-            <ProjectSlide
+            />
+            <withRouter(ProjectSlide)
               description="Check weather in your current location or in other cities."
               imgUrl="weather-app.png"
+              link="weather-app"
               stack="React, SASS, REST API"
               title="Weather App"
-            >
-              <Link
-                replace={false}
-                tabIndex="-1"
-                to="/weather-app"
-              >
-                explore
-              </Link>
-            </ProjectSlide>
+            />
           </Carousel>,
         },
         "ref": Object {
@@ -208,76 +138,41 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": Array [
-              <ProjectSlide
+              <withRouter(ProjectSlide)
                 description="Get random quotes about design."
                 imgUrl="random-quote-machine.png"
+                link="random-quote-machine"
                 stack="React, Redux, Redux-Thunk, REST API"
                 title="Random Quote Machine"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/random-quote-machine"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>,
-              <ProjectSlide
+              />,
+              <withRouter(ProjectSlide)
                 description="Drop some beats."
                 imgUrl="drum-machine.png"
+                link="drum-machine"
                 stack="React, Redux, SASS"
                 title="Drum Machine"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/drum-machine"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>,
-              <ProjectSlide
+              />,
+              <withRouter(ProjectSlide)
                 description="Simple javascript calculator."
                 imgUrl="calc.png"
+                link="calc"
                 stack="React, Redux, Redux-Thunk"
                 title="Calculator"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/calc"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>,
-              <ProjectSlide
+              />,
+              <withRouter(ProjectSlide)
                 description="Use the Pomodoro Technique to help you increase your focus."
                 imgUrl="pomodoro-clock.png"
+                link="pomodoro-clock"
                 stack="React, SASS"
                 title="Pomodoro Clock"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/pomodoro-clock"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>,
-              <ProjectSlide
+              />,
+              <withRouter(ProjectSlide)
                 description="Check weather in your current location or in other cities."
                 imgUrl="weather-app.png"
+                link="weather-app"
                 stack="React, SASS, REST API"
                 title="Weather App"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/weather-app"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>,
+              />,
             ],
           },
           "ref": null,
@@ -287,33 +182,14 @@ ShallowWrapper {
               "key": "random-quote-machine",
               "nodeType": "function",
               "props": Object {
-                "children": <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/random-quote-machine"
-                >
-                  explore
-                </Link>,
                 "description": "Get random quotes about design.",
                 "imgUrl": "random-quote-machine.png",
+                "link": "random-quote-machine",
                 "stack": "React, Redux, Redux-Thunk, REST API",
                 "title": "Random Quote Machine",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "explore",
-                  "replace": false,
-                  "tabIndex": "-1",
-                  "to": "/random-quote-machine",
-                },
-                "ref": null,
-                "rendered": "explore",
-                "type": [Function],
-              },
+              "rendered": null,
               "type": [Function],
             },
             Object {
@@ -321,33 +197,14 @@ ShallowWrapper {
               "key": "drum-machine",
               "nodeType": "function",
               "props": Object {
-                "children": <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/drum-machine"
-                >
-                  explore
-                </Link>,
                 "description": "Drop some beats.",
                 "imgUrl": "drum-machine.png",
+                "link": "drum-machine",
                 "stack": "React, Redux, SASS",
                 "title": "Drum Machine",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "explore",
-                  "replace": false,
-                  "tabIndex": "-1",
-                  "to": "/drum-machine",
-                },
-                "ref": null,
-                "rendered": "explore",
-                "type": [Function],
-              },
+              "rendered": null,
               "type": [Function],
             },
             Object {
@@ -355,33 +212,14 @@ ShallowWrapper {
               "key": "calc",
               "nodeType": "function",
               "props": Object {
-                "children": <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/calc"
-                >
-                  explore
-                </Link>,
                 "description": "Simple javascript calculator.",
                 "imgUrl": "calc.png",
+                "link": "calc",
                 "stack": "React, Redux, Redux-Thunk",
                 "title": "Calculator",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "explore",
-                  "replace": false,
-                  "tabIndex": "-1",
-                  "to": "/calc",
-                },
-                "ref": null,
-                "rendered": "explore",
-                "type": [Function],
-              },
+              "rendered": null,
               "type": [Function],
             },
             Object {
@@ -389,33 +227,14 @@ ShallowWrapper {
               "key": "pomodoro-clock",
               "nodeType": "function",
               "props": Object {
-                "children": <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/pomodoro-clock"
-                >
-                  explore
-                </Link>,
                 "description": "Use the Pomodoro Technique to help you increase your focus.",
                 "imgUrl": "pomodoro-clock.png",
+                "link": "pomodoro-clock",
                 "stack": "React, SASS",
                 "title": "Pomodoro Clock",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "explore",
-                  "replace": false,
-                  "tabIndex": "-1",
-                  "to": "/pomodoro-clock",
-                },
-                "ref": null,
-                "rendered": "explore",
-                "type": [Function],
-              },
+              "rendered": null,
               "type": [Function],
             },
             Object {
@@ -423,33 +242,14 @@ ShallowWrapper {
               "key": "weather-app",
               "nodeType": "function",
               "props": Object {
-                "children": <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/weather-app"
-                >
-                  explore
-                </Link>,
                 "description": "Check weather in your current location or in other cities.",
                 "imgUrl": "weather-app.png",
+                "link": "weather-app",
                 "stack": "React, SASS, REST API",
                 "title": "Weather App",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "explore",
-                  "replace": false,
-                  "tabIndex": "-1",
-                  "to": "/weather-app",
-                },
-                "ref": null,
-                "rendered": "explore",
-                "type": [Function],
-              },
+              "rendered": null,
               "type": [Function],
             },
           ],
@@ -520,76 +320,41 @@ ShallowWrapper {
           />,
           <ForwardRef>
             <Carousel>
-              <ProjectSlide
+              <withRouter(ProjectSlide)
                 description="Get random quotes about design."
                 imgUrl="random-quote-machine.png"
+                link="random-quote-machine"
                 stack="React, Redux, Redux-Thunk, REST API"
                 title="Random Quote Machine"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/random-quote-machine"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
-              <ProjectSlide
+              />
+              <withRouter(ProjectSlide)
                 description="Drop some beats."
                 imgUrl="drum-machine.png"
+                link="drum-machine"
                 stack="React, Redux, SASS"
                 title="Drum Machine"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/drum-machine"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
-              <ProjectSlide
+              />
+              <withRouter(ProjectSlide)
                 description="Simple javascript calculator."
                 imgUrl="calc.png"
+                link="calc"
                 stack="React, Redux, Redux-Thunk"
                 title="Calculator"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/calc"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
-              <ProjectSlide
+              />
+              <withRouter(ProjectSlide)
                 description="Use the Pomodoro Technique to help you increase your focus."
                 imgUrl="pomodoro-clock.png"
+                link="pomodoro-clock"
                 stack="React, SASS"
                 title="Pomodoro Clock"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/pomodoro-clock"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
-              <ProjectSlide
+              />
+              <withRouter(ProjectSlide)
                 description="Check weather in your current location or in other cities."
                 imgUrl="weather-app.png"
+                link="weather-app"
                 stack="React, SASS, REST API"
                 title="Weather App"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/weather-app"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
+              />
             </Carousel>
           </ForwardRef>,
           <Switch>
@@ -624,76 +389,41 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Carousel>
-              <ProjectSlide
+              <withRouter(ProjectSlide)
                 description="Get random quotes about design."
                 imgUrl="random-quote-machine.png"
+                link="random-quote-machine"
                 stack="React, Redux, Redux-Thunk, REST API"
                 title="Random Quote Machine"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/random-quote-machine"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
-              <ProjectSlide
+              />
+              <withRouter(ProjectSlide)
                 description="Drop some beats."
                 imgUrl="drum-machine.png"
+                link="drum-machine"
                 stack="React, Redux, SASS"
                 title="Drum Machine"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/drum-machine"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
-              <ProjectSlide
+              />
+              <withRouter(ProjectSlide)
                 description="Simple javascript calculator."
                 imgUrl="calc.png"
+                link="calc"
                 stack="React, Redux, Redux-Thunk"
                 title="Calculator"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/calc"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
-              <ProjectSlide
+              />
+              <withRouter(ProjectSlide)
                 description="Use the Pomodoro Technique to help you increase your focus."
                 imgUrl="pomodoro-clock.png"
+                link="pomodoro-clock"
                 stack="React, SASS"
                 title="Pomodoro Clock"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/pomodoro-clock"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
-              <ProjectSlide
+              />
+              <withRouter(ProjectSlide)
                 description="Check weather in your current location or in other cities."
                 imgUrl="weather-app.png"
+                link="weather-app"
                 stack="React, SASS, REST API"
                 title="Weather App"
-              >
-                <Link
-                  replace={false}
-                  tabIndex="-1"
-                  to="/weather-app"
-                >
-                  explore
-                </Link>
-              </ProjectSlide>
+              />
             </Carousel>,
           },
           "ref": Object {
@@ -705,76 +435,41 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": Array [
-                <ProjectSlide
+                <withRouter(ProjectSlide)
                   description="Get random quotes about design."
                   imgUrl="random-quote-machine.png"
+                  link="random-quote-machine"
                   stack="React, Redux, Redux-Thunk, REST API"
                   title="Random Quote Machine"
-                >
-                  <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/random-quote-machine"
-                  >
-                    explore
-                  </Link>
-                </ProjectSlide>,
-                <ProjectSlide
+                />,
+                <withRouter(ProjectSlide)
                   description="Drop some beats."
                   imgUrl="drum-machine.png"
+                  link="drum-machine"
                   stack="React, Redux, SASS"
                   title="Drum Machine"
-                >
-                  <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/drum-machine"
-                  >
-                    explore
-                  </Link>
-                </ProjectSlide>,
-                <ProjectSlide
+                />,
+                <withRouter(ProjectSlide)
                   description="Simple javascript calculator."
                   imgUrl="calc.png"
+                  link="calc"
                   stack="React, Redux, Redux-Thunk"
                   title="Calculator"
-                >
-                  <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/calc"
-                  >
-                    explore
-                  </Link>
-                </ProjectSlide>,
-                <ProjectSlide
+                />,
+                <withRouter(ProjectSlide)
                   description="Use the Pomodoro Technique to help you increase your focus."
                   imgUrl="pomodoro-clock.png"
+                  link="pomodoro-clock"
                   stack="React, SASS"
                   title="Pomodoro Clock"
-                >
-                  <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/pomodoro-clock"
-                  >
-                    explore
-                  </Link>
-                </ProjectSlide>,
-                <ProjectSlide
+                />,
+                <withRouter(ProjectSlide)
                   description="Check weather in your current location or in other cities."
                   imgUrl="weather-app.png"
+                  link="weather-app"
                   stack="React, SASS, REST API"
                   title="Weather App"
-                >
-                  <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/weather-app"
-                  >
-                    explore
-                  </Link>
-                </ProjectSlide>,
+                />,
               ],
             },
             "ref": null,
@@ -784,33 +479,14 @@ ShallowWrapper {
                 "key": "random-quote-machine",
                 "nodeType": "function",
                 "props": Object {
-                  "children": <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/random-quote-machine"
-                  >
-                    explore
-                  </Link>,
                   "description": "Get random quotes about design.",
                   "imgUrl": "random-quote-machine.png",
+                  "link": "random-quote-machine",
                   "stack": "React, Redux, Redux-Thunk, REST API",
                   "title": "Random Quote Machine",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "explore",
-                    "replace": false,
-                    "tabIndex": "-1",
-                    "to": "/random-quote-machine",
-                  },
-                  "ref": null,
-                  "rendered": "explore",
-                  "type": [Function],
-                },
+                "rendered": null,
                 "type": [Function],
               },
               Object {
@@ -818,33 +494,14 @@ ShallowWrapper {
                 "key": "drum-machine",
                 "nodeType": "function",
                 "props": Object {
-                  "children": <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/drum-machine"
-                  >
-                    explore
-                  </Link>,
                   "description": "Drop some beats.",
                   "imgUrl": "drum-machine.png",
+                  "link": "drum-machine",
                   "stack": "React, Redux, SASS",
                   "title": "Drum Machine",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "explore",
-                    "replace": false,
-                    "tabIndex": "-1",
-                    "to": "/drum-machine",
-                  },
-                  "ref": null,
-                  "rendered": "explore",
-                  "type": [Function],
-                },
+                "rendered": null,
                 "type": [Function],
               },
               Object {
@@ -852,33 +509,14 @@ ShallowWrapper {
                 "key": "calc",
                 "nodeType": "function",
                 "props": Object {
-                  "children": <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/calc"
-                  >
-                    explore
-                  </Link>,
                   "description": "Simple javascript calculator.",
                   "imgUrl": "calc.png",
+                  "link": "calc",
                   "stack": "React, Redux, Redux-Thunk",
                   "title": "Calculator",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "explore",
-                    "replace": false,
-                    "tabIndex": "-1",
-                    "to": "/calc",
-                  },
-                  "ref": null,
-                  "rendered": "explore",
-                  "type": [Function],
-                },
+                "rendered": null,
                 "type": [Function],
               },
               Object {
@@ -886,33 +524,14 @@ ShallowWrapper {
                 "key": "pomodoro-clock",
                 "nodeType": "function",
                 "props": Object {
-                  "children": <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/pomodoro-clock"
-                  >
-                    explore
-                  </Link>,
                   "description": "Use the Pomodoro Technique to help you increase your focus.",
                   "imgUrl": "pomodoro-clock.png",
+                  "link": "pomodoro-clock",
                   "stack": "React, SASS",
                   "title": "Pomodoro Clock",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "explore",
-                    "replace": false,
-                    "tabIndex": "-1",
-                    "to": "/pomodoro-clock",
-                  },
-                  "ref": null,
-                  "rendered": "explore",
-                  "type": [Function],
-                },
+                "rendered": null,
                 "type": [Function],
               },
               Object {
@@ -920,33 +539,14 @@ ShallowWrapper {
                 "key": "weather-app",
                 "nodeType": "function",
                 "props": Object {
-                  "children": <Link
-                    replace={false}
-                    tabIndex="-1"
-                    to="/weather-app"
-                  >
-                    explore
-                  </Link>,
                   "description": "Check weather in your current location or in other cities.",
                   "imgUrl": "weather-app.png",
+                  "link": "weather-app",
                   "stack": "React, SASS, REST API",
                   "title": "Weather App",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "explore",
-                    "replace": false,
-                    "tabIndex": "-1",
-                    "to": "/weather-app",
-                  },
-                  "ref": null,
-                  "rendered": "explore",
-                  "type": [Function],
-                },
+                "rendered": null,
                 "type": [Function],
               },
             ],

@@ -9,7 +9,6 @@ body.hasHover .drum-pad:hover {
 }
 
 .drum-machine-wrapper {
-  padding: 1%;
   background-color: $inactiveBackground;
 }
 
@@ -18,7 +17,7 @@ body.hasHover .drum-pad:hover {
   justify-content: center;
   flex-wrap: wrap;
   width: 90vw;
-  max-width: 3 * $playBtnWidth+2 * $playBtnWidth / 2.5+$controlPadWidth;
+  max-width: 3 * $playBtnWidth + 2 * $playBtnWidth / 2.5 + $controlPadWidth;
   margin: auto;
   font-size: 1.5rem;
   text-align: center;
